@@ -2,6 +2,9 @@
 
 **Tagline:** Turn a meeting decision into tests and a minimal diff.
 
+**Category:** Developer Tools  
+**Codex Session ID:** `019f7306-7262-7371-a03f-6b99df7129bf`
+
 ## What it does
 
 Meeting to Merge extracts timestamped behavioral requirements from a transcript,
