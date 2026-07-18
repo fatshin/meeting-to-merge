@@ -24,6 +24,7 @@ to draft structured requirements; tests and the human gate remain authoritative.
 
 - Live product: https://meeting-to-merge.fatshin.chatgpt.site
 - Source: https://github.com/fatshin/meeting-to-merge
+- Devpost draft: https://devpost.com/software/meeting-to-merge
 - Video: `UPLOAD_TO_YOUTUBE_AND_REPLACE`
 
 ## Limits
