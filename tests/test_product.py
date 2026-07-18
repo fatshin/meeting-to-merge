@@ -14,7 +14,12 @@ class ProductTests(unittest.TestCase):
         self.assertIn(product.PRODUCT.name, page())
         self.assertNotIn("<script>", result_markup({"status": "<script>", "headline": "safe", "metrics": {}, "items": [], "evidence": [], "artifact": {}}))
 
+    def test_browser_crlf_submission_still_builds_patch(self):
+        payload = {field.name: field.value.replace("\n", "\r\n") for field in product.PRODUCT.fields}
+        result = product.analyze(payload)
+        self.assertEqual(result["status"], "READY_FOR_HUMAN_APPLY")
+        self.assertIn("idempotency_key", result["artifact"]["patch"])
+
 
 if __name__ == "__main__":
     unittest.main()
-

@@ -36,6 +36,7 @@ def requirements(transcript: str) -> list[dict[str, str]]:
 
 
 def build_patch(source: str) -> tuple[str, list[str]]:
+    source = source.replace("\r\n", "\n").replace("\r", "\n")
     fixed = source.replace(
         '    approved = total >= 500\n    charge()\n    return {"ok": True, "order": ""}',
         '    if quantity < 1:\n'
@@ -68,4 +69,3 @@ def analyze(payload: dict[str, str]) -> dict[str, Any]:
 def acceptance(result: dict[str, Any]) -> tuple[bool, dict[str, bool]]:
     checks = {"four_requirements": result["metrics"]["requirements"] == 4, "four_tests_pass": result["metrics"]["post_patch_passes"] == 4, "idempotency_patch": "idempotency_key" in result["artifact"]["patch"], "human_apply": result["artifact"]["approval_required"]}
     return all(checks.values()), checks
-
