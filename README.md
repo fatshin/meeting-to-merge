@@ -32,7 +32,9 @@ the proposal and repository mutation.
 
 ## OpenAI and Codex
 
-Codex was used to implement the requirement-to-diff workflow. GPT-5.6 can draft
+I used Codex with GPT-5.6 to implement transcript normalization, requirement
+extraction, baseline-failure reproduction, patch generation, regression tests,
+and the public interface. A future live path can use GPT-5.6 to draft
 requirements and patch candidates, while deterministic validation enforces
 citations, ambiguity handling, and the human-apply boundary.
 
@@ -40,3 +42,7 @@ citations, ambiguity handling, and the human-apply boundary.
 
 The MVP operates on a bounded source snippet. It does not edit a live
 repository, infer unstated product decisions, or claim a simulated rerun is CI.
+
+## License
+
+This project and its synthetic transcript are released under the MIT License.
