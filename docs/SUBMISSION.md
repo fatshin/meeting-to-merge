@@ -13,9 +13,10 @@ review. It never applies the patch automatically.
 
 ## How it was built
 
-Codex implemented transcript normalization, requirement extraction, test and
-diff generation, a CRLF regression fix, and the public UI. GPT-5.6 is intended
-to draft structured requirements; tests and the human gate remain authoritative.
+I used Codex with GPT-5.6 to implement transcript normalization, requirement
+extraction, test and diff generation, a CRLF regression fix, and the public UI.
+A future live path can use GPT-5.6 to draft structured requirements; the public
+demo uses a tested fixture, and tests plus the human gate remain authoritative.
 
 ## Proof
 
